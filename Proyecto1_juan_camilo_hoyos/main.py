@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 terrain = np.loadtxt("pts1000c.dat", unpack = True)
 terrain = np.transpose(terrain)
 tin = TIN(terrain)
-
+"""
 # punto 1 graph of the terrain in 3D
 
 tin.graph_terrain_3d()
@@ -24,3 +24,15 @@ tin.graph_terrain_3d()
 p = [-8,5]
 
 elevacion_punto = tin.interpolate_elevation(p)
+"""
+    
+K = terrain[:10,:]   
+
+p =K[:0,:] 
+
+g=tin.water_source(p)
+print(g.vertex)
+
+
+
+
